@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [cookieTheme, setCookieTheme] = useCookies([THEME_COOKIE_NAME]);
 
   const preferredTheme = cookieTheme && cookieTheme[THEME_COOKIE_NAME] ? cookieTheme[THEME_COOKIE_NAME] : 'dark';
-  
+
   const [selectedTheme, setSelectedTheme] = useState<'light' | 'dark'>(preferredTheme);
 
   const toggleTheme: React.MouseEventHandler<HTMLAnchorElement> = () => {
@@ -36,10 +36,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 
   return (
-      <ThemeProvider theme={ activeTheme }>
-        <CssBaseline />
-        <Component {...pageProps} toggleTheme={toggleTheme}/>
-      </ThemeProvider>
+    <ThemeProvider theme={activeTheme}>
+      <CssBaseline />
+      <Component {...pageProps} toggleTheme={toggleTheme} />
+    </ThemeProvider>
   )
 }
 

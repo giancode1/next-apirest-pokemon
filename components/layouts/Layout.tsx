@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Head from "next/head";
 
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 interface Props {
     title?: string;
@@ -10,16 +10,11 @@ interface Props {
 
 export const Layout:FC<Props> = ({title = 'Pokemon App', children }) => {
   return (
-    <Box sx={{ flexFlow:1 }}>
+    <Container sx={{ flexFlow:1 }}>
         <Head>
             <title>{title}</title>
         </Head>
-
-      
-
-        <Box sx={{ padding: '10px 20px' }}>
-            {children}
-        </Box>
-    </Box>
+        {children}
+    </Container>
   )
 }
