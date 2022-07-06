@@ -8,7 +8,7 @@ interface Props {
     children?: React.ReactNode | undefined; //react18
 }
 
-export const Layout:FC<Props> = ({title = 'OpenJira App', children }) => {
+export const Layout:FC<Props> = ({title = 'Pokemon App', children }) => {
   return (
     <Box sx={{ flexFlow:1 }}>
         <Head>

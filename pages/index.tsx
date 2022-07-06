@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { Button, Typography } from '@mui/material';
 import { Layout } from '../components/layouts';
 import styles from '../styles/Home.module.css'
+import { Footer } from '../components/Footer';
 
 type HomeProps = {
   toggleTheme?: React.MouseEventHandler<HTMLButtonElement>;
@@ -11,12 +12,9 @@ const Home: NextPage = (props: HomeProps) => {
   return (
     <Layout title="Pokemon api rest">
       <main className={styles.main}>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <Typography variant='h1' color='primary'>Hola mundo</Typography>
-       
+        <h1>Pokemon Full Rest Api</h1>
+
         <Button
           variant="outlined"
           onClick={props.toggleTheme}
@@ -24,30 +22,18 @@ const Home: NextPage = (props: HomeProps) => {
           Toggle Theme
         </Button>
 
+        <Button
+          color='primary'
+          variant="contained"
+        >
+          Nuevo
+        </Button>
+
 
       </main>
-      
-      <footer className={styles.footer}>
-        <p>
-          Made with <span>❤</span> by &nbsp;
-          <a
-            href="https://www.giancarlo-culcay.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Giancarlo Culcay
-          </a>
-          &nbsp; | &nbsp;
-          <a
-            href="https://twitter.com/GiancCool"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            twitter
-          </a>
-        </p>
-      </footer>
 
+
+      <Footer />
     </Layout>
   )
 }
